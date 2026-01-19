@@ -1,0 +1,165 @@
+inputs = [
+    "tinygl/include/TGL"
+]
+
+output_folder = "./"
+
+clang_include_paths = [
+    "tinygl/include"
+]
+
+remove_function_prefix = "tgl"
+import_lib = "libTinyGL.a"
+
+procedure_type_overrides = {
+    "tglInit.zbuffer" = "^ZBuffer"
+}
+
+remove = [
+    glEnable
+    glDisable
+    glShadeModel
+    glCullFace
+    glPolygonMode
+    glBegin
+    glEnd
+    glRectf
+    glDrawBuffer
+    glReadBuffer
+    glReadPixels
+    glDrawArrays
+    glSetEnableSpecular
+    glGetTexturePixmap
+    glDrawText
+    glTextSize
+    glPlotPixel
+    glEdgeFlag
+    glMatrixMode
+    glLoadMatrixf
+    glLoadIdentity
+    glMultMatrixf
+    glPushMatrix
+    glPopMatrix
+    glRotatef
+    glTranslatef
+    glScalef
+    glViewport
+    glFrustum
+    glGenLists
+    glIsList
+    glNewList
+    glEndList
+    glCallList
+    glCallLists
+    glListBase
+    glDeleteList
+    glDeleteLists
+    glClear
+    glClearColor
+    glClearDepth
+    glFeedbackBuffer
+    glPassThrough
+    glRenderMode
+    glSelectBuffer
+    glInitNames
+    glPushName
+    glPopName
+    glLoadName
+    glGenTextures
+    glDeleteTextures
+    glBindTexture
+    glTexImage2D
+    glTexImage1D
+    glCopyTexImage2D
+    glTexEnvi
+    glTexParameteri
+    glAreTexturesResident
+    glIsTexture
+    glMaterialfv
+    glMaterialf
+    glColorMaterial
+    glLightfv
+    glLightf
+    glLightModeli
+    glLightModelfv
+    glFlush
+    glFinish
+    glHint
+    glGetIntegerv
+    glGetFloatv
+    glGetString
+    glGetError
+    glFrontFace
+    glEnableClientState
+    glDisableClientState
+    glArrayElement
+    glVertexPointer
+    glColorPointer
+    glNormalPointer
+    glTexCoordPointer
+    glGenBuffers
+    glDeleteBuffers
+    glBindBuffer
+    glIsBuffer
+    glMapBuffer
+    glBufferData
+    glBindBufferAsArray
+    glPolygonOffset
+    glBlendFunc
+    glBlendEquation
+    glDepthMask
+    glPointSize
+    glRasterPos2f
+    glRasterPos3f
+    glRasterPos4f
+    glRasterPos2fv
+    glRasterPos3fv
+    glRasterPos4fv
+    glDrawPixels
+    glPixelZoom
+    glPostProcess
+    glPolygonStipple
+    glDebug
+    glInit
+    glClose
+    glVertex2f
+    glVertex2d
+    glVertex2fv
+    glVertex2dv
+    glVertex3f
+    glVertex3d
+    glVertex3fv
+    glVertex3dv
+    glVertex4f
+    glVertex4d
+    glVertex4fv
+    glVertex4dv
+    glColor3f
+    glColor3d
+    glColor3fv
+    glColor3dv
+    glColor4f
+    glColor4d
+    glColor4fv
+    glColor4dv
+    glNormal3f
+    glNormal3d
+    glNormal3fv
+    glNormal3dv
+    glTexCoord1f
+    glTexCoord1d
+    glTexCoord1fv
+    glTexCoord1dv
+    glTexCoord2f
+    glTexCoord2d
+    glTexCoord2fv
+    glTexCoord2dv
+    glTexCoord3f
+    glTexCoord3d
+    glTexCoord3fv
+    glTexCoord3dv
+    glTexCoord4f
+    glTexCoord4d
+    glTexCoord4fv
+    glTexCoord4dv
+]

@@ -1,0 +1,11 @@
+inputs = [
+    "tinygl/include"
+]
+
+output_folder = "./"
+
+clang_include_paths = [
+    "tinygl/include"
+]
+
+import_lib = "libTinyGL.a"
