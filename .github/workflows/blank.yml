@@ -34,11 +34,10 @@ jobs:
         with:
           with_clang: true
 
-      #- name: print version
-      #  run: |
-      #    make --version
-      #    clang --version
-
       - name: build lib
-        working-directory: .\tinygl
+        working-directory: tinygl
         run: make CC=clang
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: tinygl\lib
