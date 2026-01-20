@@ -2,7 +2,8 @@
 set -euo pipefail
 
 pushd tinygl
-make
+make clean
+make CC=clang
 cp lib/* ../
 popd
 
