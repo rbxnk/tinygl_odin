@@ -41,4 +41,4 @@ jobs:
 
       - name: build lib
         working-directory: .\tinygl
-        run: make
+        run: make CC=clang
