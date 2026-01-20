@@ -1,0 +1,23 @@
+
+name: build_lib_mac
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: build lib
+        working-directory: tinygl
+        run: make CC=clang
+      - run: mv tinygl/lib/libTinyGL.a libTinyGL_mac.a
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: 'libTinyGL_mac.a'
+          new_branch: gh-action-builds
+          
