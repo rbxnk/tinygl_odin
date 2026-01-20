@@ -30,12 +30,9 @@ jobs:
         with:
           submodules: recursive
       
-      - name: ls
-        run: ls
-
-      #- uses: bwoodsend/setup-winlibs-action@v1
-      #  with:
-      #    with_clang: true
+      - uses: bwoodsend/setup-winlibs-action@v1
+        with:
+          with_clang: true
 
       #- name: print version
       #  run: |
