@@ -47,7 +47,6 @@ jobs:
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.4
         with:
-          default_author: github_actions
           add: 'libTinyGL_win.a'
           new_branch: gh-action-builds
           
