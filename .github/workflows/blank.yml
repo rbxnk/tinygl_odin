@@ -30,15 +30,15 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: bwoodsend/setup-winlibs-action@v1
-        with:
-          with_clang: true
+      #- uses: bwoodsend/setup-winlibs-action@v1
+      #  with:
+      #    with_clang: true
 
-      - name: print version
-        run: |
-          make --version
-          clang --version
+      #- name: print version
+      #  run: |
+      #    make --version
+      #    clang --version
 
       - name: build lib
-        working-directory: tinygl
+        working-directory: .\tinygl
         run: make
