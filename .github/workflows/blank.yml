@@ -37,7 +37,18 @@ jobs:
       - name: build lib
         working-directory: tinygl
         run: make CC=clang
+        
+      #- uses: actions/upload-artifact@v4
+      #  with:
+      #    path: tinygl\lib
 
-      - uses: actions/upload-artifact@v4
+      - run: mv tinygl/lib/libTinyGL.a libTinyGL_win.a
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.4
         with:
-          path: tinygl\lib
+          default_author: github_actions
+          add: 'libTinyGL_win.a'
+          new_branch: gh-action-builds
+          
+      
