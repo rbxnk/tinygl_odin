@@ -38,5 +38,5 @@ jobs:
           clang --version
 
       - name: build lib
-        working-directory: ./tinygl
+        working-directory: tinygl
         run: make
