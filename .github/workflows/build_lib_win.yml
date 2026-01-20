@@ -1,0 +1,26 @@
+
+name: build_lib_win
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: bwoodsend/setup-winlibs-action@v1
+        with:
+          with_clang: true
+      - name: build lib
+        working-directory: tinygl
+        run: make CC=clang
+      - run: mv tinygl/lib/libTinyGL.a libTinyGL_win.a
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: 'libTinyGL_win.a'
+          new_branch: gh-action-builds
+          
